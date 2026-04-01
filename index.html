@@ -6,7 +6,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Consolas, monospace; /* changed to Consolas */
+      font-family: Consolas, monospace; /* Monospaced font */
       text-align: center;
       background: #111;
       color: white;
@@ -14,7 +14,7 @@
 
     /* Desktop styles */
     img {
-      max-width: 55%;   /* slightly smaller on desktop */
+      max-width: 55%;   /* desktop image size */
       width: 450px;     /* 10% smaller than 500px */
       height: auto;
       margin-top: 50px;
@@ -22,7 +22,7 @@
 
     h1 {
       margin-top: 20px;
-      font-size: 18px;  /* 25% smaller than 24px */
+      font-size: 18px;  /* desktop text smaller */
       color: white;
     }
 
@@ -38,14 +38,14 @@
     /* Mobile styles */
     @media (max-width: 900px) {
       img {
-        width: calc(100% - 16px); /* almost full width with 8px padding each side */
+        width: calc(100% - 16px); /* almost full width */
         max-width: none;
         height: auto;
-        margin: 50px 8px 0;       /* top + side spacing */
+        margin: 30px 6px 0;       /* small side padding */
       }
 
       h1 {
-        font-size: 40px;          /* larger text on mobile */
+        font-size: 55px;           /* significantly larger text */
       }
     }
   </style>
