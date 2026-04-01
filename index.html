@@ -27,13 +27,14 @@
     /* Mobile */
     @media (max-width: 900px) {
       img {
-        width: 96%;     
-        max-width: 96%;
+        width: calc(100% - 20px); /* full width minus padding */
+        max-width: none;          /* remove desktop constraint */
         height: auto;
+        margin: 50px 10px 0;      /* 10px padding on each side */
       }
 
       h1 {
-        font-size: 40px; /* 1.5× of 18px */
+        font-size: 40px;
       }
     }
   </style>
