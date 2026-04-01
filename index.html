@@ -13,27 +13,27 @@
     }
 
     img {
-      max-width: 60%; /* smaller on desktop */
-      width: 500px;   /* sets a fixed max size */
-      height: auto;   /* preserves aspect ratio */
+      max-width: 55%;  /* slightly smaller desktop */
+      width: 450px;    /* 10% smaller than 500px */
+      height: auto;
       margin-top: 50px;
     }
 
     h1 {
       margin-top: 20px;
-      font-size: 24px;
+      font-size: 18px; /* 25% smaller than 24px */
     }
 
-    /* Responsive for smaller screens */
+    /* Mobile */
     @media (max-width: 900px) {
       img {
-        max-width: 150%;
-        width: 120%;
-        height:auto;
+        width: 92%;     
+        max-width: 92%;
+        height: auto;
       }
 
       h1 {
-        font-size: 100px;
+        font-size: 27px; /* 1.5× of 18px */
       }
     }
   </style>
