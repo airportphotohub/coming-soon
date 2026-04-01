@@ -11,14 +11,29 @@
       background: #111;
       color: white;
     }
+
     img {
-      max-width: 80%;
+      max-width: 40%; /* smaller on desktop */
+      width: 200px;   /* sets a fixed max size */
+      height: auto;   /* preserves aspect ratio */
       margin-top: 50px;
-      border-radius: 10px;
     }
+
     h1 {
       margin-top: 20px;
       font-size: 2em;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 600px) {
+      img {
+        max-width: 70%;
+        width: auto;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
