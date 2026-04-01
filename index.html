@@ -6,41 +6,54 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Consolas, monospace; /* changed to Consolas */
       text-align: center;
       background: #111;
       color: white;
     }
 
+    /* Desktop styles */
     img {
-      max-width: 55%;  /* slightly smaller desktop */
-      width: 450px;    /* 10% smaller than 500px */
+      max-width: 55%;   /* slightly smaller on desktop */
+      width: 450px;     /* 10% smaller than 500px */
       height: auto;
       margin-top: 50px;
     }
 
     h1 {
       margin-top: 20px;
-      font-size: 18px; /* 25% smaller than 24px */
+      font-size: 18px;  /* 25% smaller than 24px */
+      color: white;
     }
 
-    /* Mobile */
+    /* Highlighted underline for "Coming Soon" */
+    .highlight-underline {
+      text-decoration: underline;
+      text-decoration-color: #F2AA84;
+      text-decoration-thickness: 3px; 
+      text-underline-offset: 4px;    
+      color: white;                    
+    }
+
+    /* Mobile styles */
     @media (max-width: 900px) {
       img {
-        width: calc(100% - 20px); /* full width minus padding */
-        max-width: none;          /* remove desktop constraint */
+        width: calc(100% - 16px); /* almost full width with 8px padding each side */
+        max-width: none;
         height: auto;
-        margin: 50px 10px 0;      /* 10px padding on each side */
+        margin: 50px 8px 0;       /* top + side spacing */
       }
 
       h1 {
-        font-size: 40px;
+        font-size: 40px;          /* larger text on mobile */
       }
     }
   </style>
 </head>
 <body>
   <img src="APH_Logo.jpg" alt="Coming Soon">
-  <h1>Something awesome is coming soon.</h1>
+  <h1>
+    Something awesome is <span class="highlight-underline">coming soon</span>.
+  </h1>
 </body>
 </html>
