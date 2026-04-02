@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Consolas, monospace; /* Monospaced font */
+      text-align: center;
+      background: #111;
+      color: white;
+    }
 
+    /* Desktop styles */
+    img {
+      max-width: 95%;   /* desktop image size */
+      width: 850px;     /* 10% smaller than 500px */
+      height: auto;
+      margin-top: 50px;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;  /* desktop text smaller */
+      color: white;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 900px) {
+      img {
+        width: calc(250% - 16px); /* almost full width */
+        max-width: none;
+        height: auto;
+        margin: 30px 6px 0;       /* small side padding */
+      }
+
+      h1 {
+        font-size: 65px;           /* significantly larger text */
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="APH_Logo.jpg" alt="Coming Soon">
+  <h1>
+    Something awesome is <span class="highlight-underline">coming soon</span>.
+  </h1>
+</body>
+</html>
