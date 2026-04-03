@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Coming Soon</title>
+
   <style>
     body {
       margin: 0;
       font-family: Consolas, monospace;
       text-align: center;
-      background: #000000; /* matches image background */
-      color: white;
+      background: #ffffff;
+      color: #000;
+      transition: background 0.25s, color 0.25s;
     }
 
-    /* Desktop image */
-    img {
+    /* DARK MODE */
+    body.dark {
+      background: #000;
+      color: #fff;
+    }
+
+    /* LOGO */
+    img.logo {
       max-width: 95%;
       width: 650px;
       height: auto;
@@ -23,28 +31,80 @@
     h1 {
       margin-top: 20px;
       font-size: 28px;
-      color: white;
     }
 
-    /* Mobile styles */
+    /* BUTTON (copied behavior/positioning from your main site) */
+    .dark-toggle {
+      position: absolute;
+      top: 14px;
+      right: 28px;
+      width: 50px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      z-index: 100;
+    }
+
+    .dark-toggle:hover {
+      transform: scale(1.2);
+    }
+
+    .dark-toggle img {
+      width: 55px;
+      height: 45px;
+    }
+
+    /* MOBILE */
     @media (max-width: 900px) {
-      img {
-        width: 95%;        /* almost full width for mobile */
-        height: auto;
+      img.logo {
+        width: 95%;
         margin: 30px auto 0;
       }
 
       h1 {
-        font-size: 65px;
+        font-size: 40px;
       }
     }
-
   </style>
 </head>
+
 <body>
-  <img src="APH_Logo_Dark.png" alt="Coming Soon">
+
+  <!-- DARK MODE BUTTON -->
+  <button class="dark-toggle" id="darkToggle">
+    <img id="toggleIcon" src="dark-toggle.png" alt="Toggle Dark Mode">
+  </button>
+
+  <!-- LOGO -->
+  <img id="logo" class="logo" src="APH_Logo_Light.png" alt="Coming Soon">
+
   <h1>
-    Something awesome is <span class="highlight-underline">coming soon</span>.
+    Something awesome is coming soon.
   </h1>
+
+  <script>
+    const toggleBtn = document.getElementById("darkToggle");
+    const body = document.body;
+    const logo = document.getElementById("logo");
+    const icon = document.getElementById("toggleIcon");
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+
+      if (body.classList.contains("dark")) {
+        logo.src = "APH_Logo_Dark.png";
+        icon.src = "dark-toggle-dark.png";
+      } else {
+        logo.src = "APH_Logo_Light.png";
+        icon.src = "dark-toggle.png";
+      }
+    });
+  </script>
+
 </body>
 </html>
