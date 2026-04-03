@@ -6,38 +6,42 @@
   <style>
     body {
       margin: 0;
-      font-family: Consolas, monospace; /* Monospaced font */
+      font-family: Consolas, monospace;
       text-align: center;
       background: #111;
       color: white;
     }
 
-    /* Desktop styles */
+    /* Desktop image */
     img {
-      max-width: 95%;   /* desktop image size */
-      width: 850px;     /* 10% smaller than 500px */
+      max-width: 95%;
+      width: 850px;
       height: auto;
       margin-top: 50px;
     }
 
     h1 {
       margin-top: 20px;
-      font-size: 28px;  /* desktop text smaller */
+      font-size: 28px;
       color: white;
     }
 
     /* Mobile styles */
     @media (max-width: 900px) {
       img {
-        width: calc(250% - 16px); /* almost full width */
-        max-width: none;
+        width: 95%;        /* almost full width for mobile */
         height: auto;
-        margin: 30px 6px 0;       /* small side padding */
+        margin: 30px auto 0;
       }
 
       h1 {
-        font-size: 65px;           /* significantly larger text */
+        font-size: 65px;
       }
+    }
+
+    /* Optional: highlight underline for your text */
+    .highlight-underline {
+      border-bottom: 3px solid #fff;
     }
   </style>
 </head>
